@@ -60,8 +60,5 @@ for i in `seq $i_begin $i_end`; do
         fi
     done
 done
-cd $temp_subfolder
-for x in ./*.txt; do
-  mkdir "${x%.*}" && mv "$x" "${x%.*}"
-done
+
 echo "Done!"
