@@ -37,7 +37,7 @@ echo 'Config successfully loaded! Start download...'
 for i in `seq $i_begin $i_end`; do
     for i_format in "$i" "0$i" "00$i" "000$1"; do
         url=`echo "$url_format" | sed "s/##/$i_format/"`
-        fname="$temp_subfolder/Chapter $i_format.txt"
+        fname="$temp_subfolder/mkdir -p Chapter $i_format/Chapter $i_format.txt"
         
         response=`wget -q --server-response --spider "$url" 2>&1 | sed -n '/HTTP\/1.1 200 OK/ p'`
         if [ -n "$response" ]; then
